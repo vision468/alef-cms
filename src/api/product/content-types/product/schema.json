@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "discount": {
+      "type": "decimal",
+      "max": 100,
+      "min": 0
+    },
+    "rating": {
+      "type": "string"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "color": {
+      "type": "string"
+    },
+    "material": {
+      "type": "string"
+    },
+    "catergory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::catergory.catergory"
+    },
+    "sex": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sex.sex"
+    },
+    "sku": {
+      "type": "integer"
+    },
+    "live": {
+      "type": "boolean"
+    },
+    "unlimited": {
+      "type": "boolean"
+    },
+    "ProductID": {
+      "type": "integer",
+      "unique": true
+    }
+  }
+}

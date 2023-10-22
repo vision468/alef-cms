@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catergories",
+  "info": {
+    "singularName": "catergory",
+    "pluralName": "catergories",
+    "displayName": "catergory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}
